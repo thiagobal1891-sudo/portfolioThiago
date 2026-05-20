@@ -1,68 +1,44 @@
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
+@import "tailwindcss";
 
-@layer base {
-  :root {
-    --background: 240 10% 4%;
-    --foreground: 0 0% 98%;
+@theme {
+  --font-sans: var(--font-geist-sans);
+  --font-mono: var(--font-geist-mono);
+  
+  --color-background: #FAFAFA;
+  --color-foreground: #1A1A1A;
+  
+  --color-muted: #F4F4F5;
+  --color-muted-foreground: #71717A;
+  
+  --color-accent: #000000;
+  --color-accent-foreground: #FFFFFF;
+}
 
-    --card: 240 10% 6%;
-    --card-foreground: 0 0% 98%;
-
-    --popover: 240 10% 4%;
-    --popover-foreground: 0 0% 98%;
-
-    --primary: 250 100% 65%;
-    --primary-foreground: 0 0% 100%;
-
-    --secondary: 240 10% 12%;
-    --secondary-foreground: 0 0% 98%;
-
-    --muted: 240 10% 12%;
-    --muted-foreground: 240 5% 65%;
-
-    --accent: 250 100% 65%;
-    --accent-foreground: 0 0% 98%;
-
-    --destructive: 0 62.8% 30.6%;
-    --destructive-foreground: 0 0% 98%;
-
-    --border: 240 10% 15%;
-    --input: 240 10% 15%;
-    --ring: 250 100% 65%;
-
-    --radius: 0.75rem;
+@utility container {
+  margin-inline: auto;
+  padding-inline: 2rem;
+  @media (min-width: 1280px) {
+    max-width: none;
+  }
+  @media (min-width: 1400px) {
+    max-width: 1400px;
   }
 }
 
 @layer base {
-  * {
-    @apply border-border;
+  *, ::before, ::after {
+    border-color: var(--color-muted);
   }
   body {
-    @apply bg-background text-foreground;
-    font-feature-settings: "rlig" 1, "calt" 1;
-    overflow-x: hidden;
+    background-color: var(--color-background);
+    color: var(--color-foreground);
+    font-family: var(--font-sans);
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
   }
-}
 
-/* Custom Utilities for Premium Look */
-@layer utilities {
-  .text-gradient {
-    @apply bg-clip-text text-transparent bg-gradient-to-r from-blue-400 to-violet-600;
+  ::selection {
+    background-color: var(--color-accent);
+    color: var(--color-accent-foreground);
   }
-  
-  .glass {
-    @apply bg-background/50 backdrop-blur-md border border-white/5;
-  }
-  
-  .glow {
-    box-shadow: 0 0 40px -10px theme('colors.blue.500');
-  }
-}
-
-/* Smooth Scroll */
-html {
-  scroll-behavior: smooth;
 }
