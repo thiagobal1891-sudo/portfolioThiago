@@ -1,3 +1,4 @@
+import { Mail } from "lucide-react";
 import { GithubIcon, LinkedinIcon, MailIcon } from "@/components/ui/icons";
 export const siteConfig = {
   name: "Thiago",

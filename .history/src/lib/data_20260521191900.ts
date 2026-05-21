@@ -1,14 +1,17 @@
-import { GithubIcon, LinkedinIcon, MailIcon } from "@/components/ui/icons";
+import { Mail } from "lucide-react";
+import { GithubIcon, TwitterIcon, LinkedinIcon } from "@/components/ui/icons";
+
 export const siteConfig = {
   name: "Thiago",
   role: "Frontend Engineer",
   description: "Construyendo interfaces web rápidas, accesibles y estéticamente precisas.",
-email: "thiagobalrami17@gmail.com",
-socials: [
-  { name: "GitHub", url: "https://github.com/thiagobal1891-sudo", icon: GithubIcon },
-  { name: "LinkedIn", url: "https://www.linkedin.com/in/thiago-baltrons-90678b235/", icon: LinkedinIcon },
-  { name: "Email", url: "mailto:thiagobalrami17@gmail.com", icon: MailIcon },
-],
+  email: "hello@thiago.dev",
+  socials: [
+    { name: "GitHub", url: "https://github.com/thiagobal1891-sudo", icon: GithubIcon },
+    { name: "LinkedIn", url: "https://www.linkedin.com/in/thiago-baltrons-90678b235/", icon: LinkedinIcon },
+    { name: "Twitter", url: "https://twitter.com/thiago", icon: TwitterIcon },
+    { name: "Email", url: "thiagobalrami17@gmail.com", icon: Mail },
+  ]
 };
 
 export const skills = {

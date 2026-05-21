@@ -1,14 +1,17 @@
-import { GithubIcon, LinkedinIcon, MailIcon } from "@/components/ui/icons";
+import { Mail } from "lucide-react";
+import { GithubIcon, TwitterIcon, LinkedinIcon } from "@/components/ui/icons";
+
 export const siteConfig = {
   name: "Thiago",
   role: "Frontend Engineer",
   description: "Construyendo interfaces web rápidas, accesibles y estéticamente precisas.",
-email: "thiagobalrami17@gmail.com",
-socials: [
-  { name: "GitHub", url: "https://github.com/thiagobal1891-sudo", icon: GithubIcon },
-  { name: "LinkedIn", url: "https://www.linkedin.com/in/thiago-baltrons-90678b235/", icon: LinkedinIcon },
-  { name: "Email", url: "mailto:thiagobalrami17@gmail.com", icon: MailIcon },
-],
+  email: "hello@thiago.dev",
+  socials: [
+    { name: "GitHub", url: "https://github.com/thiago", icon: GithubIcon },
+    { name: "LinkedIn", url: "https://linkedin.com/in/thiago", icon: LinkedinIcon },
+    { name: "Twitter", url: "https://twitter.com/thiago", icon: TwitterIcon },
+    { name: "Email", url: "mailto:hello@thiago.dev", icon: Mail },
+  ]
 };
 
 export const skills = {
@@ -42,18 +45,19 @@ export const projects = [
   problem: "Mantener el estado del carrito sincronizado entre múltiples vistas sin que los datos se perdieran al navegar entre páginas.",
   solution: "Centralicé toda la lógica del carrito en un store de Pinia accesible desde cualquier componente, logrando que el estado persista durante toda la sesión de navegación.",
   stack: ["Vue 3", "Pinia", "Vue Router"],
-  image: "/projects/vue-ecommerce-cart.png",
-  imagePanel: "/projects/vue-ecommerce-cart-panel.png",
+  image: "/projects/vue-cart-hero.png",
   demoUrl: "https://vue-ecommerce-ruddy-zeta.vercel.app/#/",
   githubUrl: "https://github.com/thiagobal1891-sudo/vue-ecommerce",
   },
   {
-    id: "web-cosmeticología",
-    title: "Web Cosmetología",
-    description: "Web personalizada para una cosmetóloga, mostrando sus servicios, portafolio y contacto.",
-    stack: ["HTML", "CSS", "JavaScript"],
-    demoUrl: "https://prettyfacefd.netlify.app/",
-    githubUrl: "https://github.com/thiagobal1891-sudo/paginaweb",
-    image: "/projects/web-cosmetic-hero.png"
+    id: "studiocanvas",
+    title: "Studio Canvas",
+    description: "Portfolio inmersivo para artistas visuales con interacciones ricas.",
+    problem: "Crear una experiencia visualmente impactante que no sacrifique la accesibilidad ni el SEO.",
+    solution: "Uso estratégico de Framer Motion para transiciones de página suaves y carga progresiva de imágenes de alta resolución.",
+    stack: ["Next.js", "Framer Motion", "Tailwind", "Radix UI"],
+    demoUrl: "#",
+    githubUrl: "#",
+    image: "/projects/studiocanvas.webp"
   }
 ];

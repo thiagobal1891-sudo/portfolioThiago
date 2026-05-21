@@ -1,33 +1,26 @@
 import type { Metadata } from "next";
-import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
 
-const geistSans = Geist({
-  variable: "--font-geist-sans",
-  subsets: ["latin"],
-});
-
-const geistMono = Geist_Mono({
-  variable: "--font-geist-mono",
-  subsets: ["latin"],
-});
-
 export const metadata: Metadata = {
-  title: "Thiago | Frontend Engineer",
-  description: "Portfolio de Thiago, Frontend Developer. Construyendo interfaces web rápidas, accesibles y estéticamente precisas.",
+  title: "Thiago Baltrons — Frontend Developer",
+  description:
+    "Portfolio de Thiago Baltrons, desarrollador frontend especializado en Vue 3, JavaScript y UI moderna. Buscando primera experiencia profesional.",
+  openGraph: {
+    title: "Thiago Baltrons — Frontend Developer",
+    description:
+      "Desarrollador frontend con experiencia en Vue 3, JavaScript y proyectos reales. Aprendiendo React y Next.js.",
+    type: "website",
+  },
 };
 
 export default function RootLayout({
   children,
-}: Readonly<{
+}: {
   children: React.ReactNode;
-}>) {
+}) {
   return (
-    <html
-      lang="en"
-      className={`${geistSans.variable} ${geistMono.variable} h-full antialiased`}
-    >
-      <body className="min-h-full flex flex-col">{children}</body>
+    <html lang="es">
+      <body className="min-h-screen flex flex-col">{children}</body>
     </html>
   );
 }

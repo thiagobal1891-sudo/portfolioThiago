@@ -19,12 +19,10 @@ export function Contact() {
           Actualmente estoy buscando oportunidades como Junior Frontend Developer. 
           Si crees que mi perfil encaja con tu equipo o tienes alguna pregunta, no dudes en escribirme.
         </p>
-        <a
-          href={`mailto:${siteConfig.email}`}
-          className="mt-4 inline-flex items-center gap-2 bg-[var(--color-foreground)] text-[var(--color-background)] px-8 py-4 text-base font-medium hover:opacity-80 transition-opacity"
-        >
+        
+        <Button href={`mailto:${siteConfig.email}`} size="lg" className="mt-4">
           Enviar Mensaje
-        </a>
+        </Button>
       </motion.div>
     </section>
   );
