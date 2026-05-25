@@ -3,14 +3,14 @@
 
 @theme {
   --font-serif: "DM Serif Display", Georgia, serif;
-  --font-sans: "DM Sans", system-ui, sans-serif;
+  --font-sans: var(--font-inter), "DM Sans", system-ui, sans-serif;
 
-  --color-background: #F7F5F0;
-  --color-foreground: #141414;
-  --color-muted: #8A8278;
-  --color-border: #E8E4DC;
-  --color-accent: #141414;
-  --color-accent-foreground: #F7F5F0;
+  --color-background: #09090b; /* zinc-950 */
+  --color-foreground: #fafafa; /* zinc-50 */
+  --color-muted: #a1a1aa; /* zinc-400 */
+  --color-border: #27272a; /* zinc-800 */
+  --color-accent: #fafafa;
+  --color-accent-foreground: #09090b;
 }
 
 @layer base {
@@ -21,8 +21,27 @@
   }
 
   html {
-    scroll-behavior: smooth;
     overflow-x: hidden;
+  }
+
+  html.lenis, html.lenis body {
+    height: auto;
+  }
+
+  .lenis.lenis-smooth {
+    scroll-behavior: auto !important;
+  }
+
+  .lenis.lenis-smooth [data-lenis-prevent] {
+    overscroll-behavior: contain;
+  }
+
+  .lenis.lenis-stopped {
+    overflow: hidden;
+  }
+
+  .lenis.lenis-smooth iframe {
+    pointer-events: none;
   }
 
   body {
@@ -36,10 +55,21 @@
     overflow-x: hidden;
   }
 
+  /* Hide scrollbar for Chrome, Safari and Opera */
+  ::-webkit-scrollbar {
+    display: none;
+  }
+  
+  /* Hide scrollbar for IE, Edge and Firefox */
+  html {
+    -ms-overflow-style: none;  /* IE and Edge */
+    scrollbar-width: none;  /* Firefox */
+  }
+
   h1, h2, h3, h4 {
-    font-family: var(--font-serif);
     font-weight: 400;
     line-height: 1.1;
+    letter-spacing: -0.02em;
   }
 
   ::selection {
@@ -51,11 +81,11 @@
 @layer components {
   .container {
     width: 100%;
-    max-width: 1200px;
+    max-width: 1400px;
     margin-left: auto;
     margin-right: auto;
-    padding-left: 1.25rem;
-    padding-right: 1.25rem;
+    padding-left: 1.5rem;
+    padding-right: 1.5rem;
   }
 
   @media (min-width: 640px) {
@@ -64,4 +94,4 @@
       padding-right: 2rem;
     }
   }
-}
+}

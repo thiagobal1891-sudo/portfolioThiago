@@ -10,7 +10,7 @@ const inter = Inter({
 });
 
 export const metadata: Metadata = {
-  title: "Thiago Baltrons — Web Frontend Developer",
+  title: "Thiago Baltrons — Frontend Developer",
   description:
     "Portfolio de Thiago Baltrons, desarrollador frontend especializado en Vue 3, JavaScript y UI moderna. Buscando primera experiencia profesional.",
   openGraph: {

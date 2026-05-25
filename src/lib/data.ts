@@ -1,7 +1,7 @@
 import { GithubIcon, LinkedinIcon, MailIcon } from "@/components/ui/icons";
 export const siteConfig = {
   name: "Thiago",
-  role: "Frontend Engineer",
+  role: "Front End Web Developer",
   description: "Construyendo interfaces web rápidas, accesibles y estéticamente precisas.",
 email: "thiagobalrami17@gmail.com",
 socials: [
@@ -60,4 +60,13 @@ export const projects = [
   githubUrl: "https://github.com/thiagobal1891-sudo/paginaweb",
   image: "/projects/web-cosmetic-hero.png",
 },
+];
+export const education = [
+  {
+    institution: "IBEC",
+    location: "Montevideo, Uruguay",
+    degree: "Desarrollador Web Front-End",
+    status: "Graduado · 2025",
+    description: "Título obtenido: Desarrollador Web Front-End",
+  }
 ];
