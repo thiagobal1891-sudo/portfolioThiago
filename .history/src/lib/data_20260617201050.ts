@@ -59,7 +59,7 @@ export const projects = [
   demoUrl: "https://prettyfacefd.netlify.app/",
   githubUrl: "https://github.com/thiagobal1891-sudo/paginaweb",
   image: "/projects/web-cosmetic-hero.png",
-  imagePanel: "/projects/web-cosmetic-panel.png"
+  imagePanel: "/projects/vue-ecommerce-cart-panel.png"
 },
 ];
 export const education = [
