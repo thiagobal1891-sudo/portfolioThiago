@@ -59,9 +59,10 @@
     display: none;
   }
   
+  /* Hide scrollbar for IE, Edge and Firefox */
   html {
-    -ms-overflow-style: none;
-    scrollbar-width: none;
+    -ms-overflow-style: none;  /* IE and Edge */
+    scrollbar-width: none;  /* Firefox */
   }
 
   h1, h2, h3, h4 {

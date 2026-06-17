@@ -61,7 +61,7 @@
   
   html {
     -ms-overflow-style: none;
-    scrollbar-width: none;
+    scrollbar-width: none;  /* Firefox */
   }
 
   h1, h2, h3, h4 {
